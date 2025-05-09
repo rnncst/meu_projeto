@@ -9,10 +9,10 @@
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
-/*Variaveis*/
+/*Cores variaveis*/
 :root {
-    --bg-color: #080808;
-    --second-bg-color: #131313;
+    --bg-color: #1d1d1d;
+    --second-bg-color: #474646;
     --cor-texto: #ffffff;
     --cor--principal: #31bb0fee;
 }
@@ -112,9 +112,9 @@ span {
 }
 .home-img img {
     position: relative;
-    top: 3rem;
+    top: 1rem;
     width: 27vw;
-    border-radius: 50%;
+    border-radius: 30%;
     box-shadow: 0 0 25px var(--cor--principal);
     cursor: pointer;
     transition: 0.4s ease-in-out;
@@ -426,7 +426,7 @@ span {
     margin-bottom: 5rem;
 }
 .testimonials-box img {
-    width: 15rem;
+    width: 21rem;
     border-radius: 50%;
     border: 3px solid var(--cor--principal);
     box-shadow: 0 0 25px var(--cor--principal);

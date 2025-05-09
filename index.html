@@ -45,10 +45,11 @@
             </p>
 
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/renan-firmino-2b4310172/" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/rnncst" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/rnncst_/profilecard/?igsh=M3lsdWd2dTBqcms=" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.facebook.com/share/1ApkuJ7HSG/" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.linkedin.com/in/renan-firmino-2b4310172/" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-linkedin' aria-label="linkedin"></i></a>
+                <a href="https://github.com/rnncst/meu_projeto" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-github' aria-label="github"></i></a>
+                <a href="https://www.instagram.com/rnncst_/profilecard/?igsh=M3lsdWd2dTBqcms=" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-instagram' aria-label="instagram"></i></a>
+                <a href="https://www.facebook.com/share/1ApkuJ7HSG/" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-facebook' aria-label="facebook"></i></a>
+                <a href="https://wa.me/5511993978017?text=Olá, %20eu%20gostaria%20de%20contratar%20um%20dos%20seus%20serviços,%20podemos%20conversar?" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-whatsapp'></i></a>
             </div>
 
             <div class="btn-group">
@@ -103,7 +104,7 @@
                 <div class="timeline-dot"></div>
                     <div class="timeline-date">2025</div>
                     <div class="timeline-content"><h3>Graduação na Uníntese - ADS</h3>
-                        <p>Em 2025 eu inicio a minha graduação na Uníntese em Análise e Desenvolvimento de Sistemas.
+                        <p>Em 2025 eu dou inicio a minha graduação na Uníntese em Análise e Desenvolvimento de Sistemas.
                             Com esse passo, eu espero conseguir ingressar e permanecer no mercado de trabalho.</p>
                     </div>
             </div>
@@ -114,14 +115,14 @@
 <!--Inicio da sessão "Serviços e Trabalhos"-->
     <section>
         <section  class="services" id="services">
-            <h2 class="heading">Serviços</h2>
+            <h2 class="heading">Serviços disponiveis</h2>
 
             <div class="services-container">
                 <div class="service-box">
                     <div class="service-info">
-                        <h4>Serviço 1</h4>
-                        <p>Essa área é destinada aos serviços que eu for aprendendo e me sentindo confiante a prestar.
-                            por enquanto é uma área experimental e de testes, pois comecei a desenvolver recentemente.</p>
+                        <h4>Portfólio</h4>
+                        <p>Esse portfólio no qual você está navegando é um dos serviços disponiveis, como ainda estou no inicio da minha carreira, não consigo
+                            fornecer uma variedade muito grande de designs, porém com tempo e paciência tudo é possível.</p>
                     </div>
                 </div>
 
@@ -156,7 +157,7 @@
 <!--Inicio da sessão "Clientes"-->
     <section class="testimonials" id="testimonials">
         <div class="testimonials-box">
-            <h2 class="heading">Clientes</h2>
+            <h2 class="heading">Feedback dos clientes</h2>
 
             <div class="wrapper">
                 <div class="testimonials-item">
@@ -205,36 +206,61 @@
     </section>
 <!--Fim da sessão "Clientes"-->
 
-<!--Inicio da sessão "Contato"-->
-    <section class="contact" id="contact">
-        <h2 class="heading">Entre em <span>contato</span>!</h2>
-        <form action="">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" placeholder="Seu nome completo">
-                    <input type="email" placeholder="Email">
-                </div>
-                <div class="input-box">
-                    <input type="number" placeholder="(DDD) Número de telefone">
-                    <input type="text" placeholder="Assunto">
-                </div>
+<!-- Início da sessão "Contato" -->
+<section class="contact" id="contact">
+    <h2 class="heading">Entre em <span>contato</span>!</h2>
+    <form id="contact-form">
+        <div class="input-group">
+            <div class="input-box">
+                <input type="text" name="from_name" placeholder="Seu nome completo" required>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
+            <div class="input-box">
+                <input type="number" name="phone" placeholder="(DDD) Número de telefone" required>
+                <input type="text" name="subject" placeholder="Assunto" required>
+            </div>
+        </div>
 
-            <div class="input-group-2">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
-                <input type="submit" value="Enviar mensagem" class="btn">
-            </div>
-        </form>
-    </section>
-<!--Fim da sessão "Contato"-->
+        <div class="input-group-2">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+            <input type="submit" value="Enviar mensagem" class="btn">
+        </div>
+    </form>
+</section>
+<!-- Fim da sessão "Contato" -->
+
+<!--<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    // Inicializa o EmailJS
+    (function() {
+        emailjs.init("0y8nTQLxMsVZc1_UG"); // Substitua pelo seu User ID
+    })();
+
+    // Envio do formulário
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_qy4h6n4', 'template_x7n4qfr', this) // Substitua pelos seus IDs
+            .then(function() {
+                alert('Mensagem enviada com sucesso!');
+                e.target.reset();
+            }, function(error) {
+                alert('Erro ao enviar. Tente novamente.');
+                console.log('Erro:', error);
+            });
+    });
+</script>
+-->
+
 
 <!--Inicio do rodapé-->
     <footer class="footer">
         <div class="social">
-            <a href="https://www.linkedin.com/in/renan-firmino-2b4310172/" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/rnncst" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-github'></i></a>
-            <a href="https://www.instagram.com/rnncst_/profilecard/?igsh=M3lsdWd2dTBqcms=" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-instagram'></i></a>
-            <a href="https://www.facebook.com/share/1ApkuJ7HSG/" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.linkedin.com/in/renan-firmino-2b4310172/" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-linkedin' aria-label="linkedin"></i></a>
+            <a href="https://github.com/rnncst/meu_projeto" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-github' aria-label="github"></i></a>
+            <a href="https://www.instagram.com/rnncst_/profilecard/?igsh=M3lsdWd2dTBqcms=" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-instagram' aria-label="instagram"></i></a>
+            <a href="https://www.facebook.com/share/1ApkuJ7HSG/" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-facebook' aria-label="facebook"></i></a>
+            <a href="https://wa.me/5511993978017?text=Olá, %20eu%20gostaria%20de%20contratar%20um%20dos%20seus%20serviços,%20podemos%20conversar?" target="_blank" rel="noopener noreferrer" alt=""><i class='bx bxl-whatsapp'></i></a>
         </div>
 
         <ul class="list">

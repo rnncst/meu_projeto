@@ -229,28 +229,6 @@
 </section>
 <!-- Fim da sessão "Contato" -->
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    // Inicializa o EmailJS
-    (function() {
-        emailjs.init("0y8nTQLxMsVZc1_UG"); // Substitua pelo seu User ID
-    })();
-
-    // Envio do formulário
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        emailjs.sendForm('service_qy4h6n4', 'template_x7n4qfr', this) // Substitua pelos seus IDs
-            .then(function() {
-                alert('Mensagem enviada com sucesso!');
-                e.target.reset();
-            }, function(error) {
-                alert('Erro ao enviar. Tente novamente.');
-                console.log('Erro:', error);
-            });
-    });
-</script>
-
 <!--Inicio do rodapé-->
     <footer class="footer">
         <div class="social">

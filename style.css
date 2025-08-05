@@ -311,7 +311,7 @@ span {
     box-shadow: 0 0 25px var(--cor--principal),
                 0 0 25px var(--cor--principal);
     position: absolute;
-    left: calc(50% - 8px);
+    right: calc(50% - 8px);
     border-radius: 50%;
     top: 10px;
 }
@@ -427,7 +427,7 @@ span {
 }
 .testimonials-box img {
     width: 21rem;
-    border-radius: 50%;
+    border-radius: 10%;
     border: 3px solid var(--cor--principal);
     box-shadow: 0 0 25px var(--cor--principal);
 }
@@ -599,7 +599,7 @@ span {
         padding-left: 37px;
     }
     .timeline-dot{
-        left: 0;
+        left: 1;
     }
     .services{
         padding-bottom: 7rem;

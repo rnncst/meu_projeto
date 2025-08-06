@@ -26,3 +26,38 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle("bx-x");
     navbar.classList.toggle("active");
 }
+
+  const slider = document.querySelector('.testimonials-slider');
+  const items = document.querySelectorAll('.testimonials-item');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  const itemsPerSlide = 1;
+  const totalItems = items.length;
+  const maxIndex = Math.ceil(totalItems / itemsPerSlide);
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const item = slider.querySelector('.testimonials-item');
+    const style = getComputedStyle(slider);
+    const gap = parseInt(style.gap) || 0;
+
+    const itemWidth = item.offsetWidth;
+    const totalGap = gap * currentIndex * itemsPerSlide;
+    const offset = (itemWidth * currentIndex * itemsPerSlide) + totalGap;
+
+    slider.style.transform = `translateX(-${offset}px)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % maxIndex;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + maxIndex) % maxIndex;
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', updateCarousel); // recalcula no redimensionamento
+  updateCarousel(); // inicializa

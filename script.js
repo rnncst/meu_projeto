@@ -27,6 +27,9 @@ menuIcon.onclick = () => {
     navbar.classList.toggle("active");
 }
 
+  
+
+
   const slider = document.querySelector('.testimonials-slider');
   const items = document.querySelectorAll('.testimonials-item');
   const prevBtn = document.getElementById('prevBtn');

@@ -292,7 +292,11 @@
 </section>
 
 <!--preencimento de formulario-->
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- EmailJS -->
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 <script>
     // Inicializa o EmailJS
     (function() {
@@ -303,13 +307,28 @@
     document.getElementById('contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
 
-        emailjs.sendForm('service_qy4h6n4', 'template_x7n4qfr', this) // Substitua pelos seus IDs
-            .then(function() {
-                alert('Mensagem enviada com sucesso!');
+        emailjs.sendForm('service_qy4h6n4', 'template_x7n4qfr', this)
+            .then(() => {
+                Swal.fire({
+                    title: 'Mensagem enviada!',
+                    text: 'Obrigado pelo contato, retornaremos em breve.',
+                    icon: 'success',
+                    confirmButtonColor: '#31bb0fee',
+                    background: '#ffffff',
+                    color: '#000000'
+                });
                 e.target.reset();
-            }, function(error) {
-                alert('Erro ao enviar. Tente novamente.');
-                console.log('Erro:', error);
+            })
+            .catch((error) => {
+                Swal.fire({
+                    title: 'Erro ao enviar',
+                    text: 'Ocorreu um problema. Por favor, tente novamente.',
+                    icon: 'error',
+                    confirmButtonColor: '#31bb0fee',
+                    background: '#ffffff',
+                    color: '#000000'
+                });
+                console.error('Erro:', error);
             });
     });
 </script>
